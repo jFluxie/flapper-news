@@ -5,14 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+
 
 var app = express();
 
 var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
+
+var index = require('./routes/index');
+var users = require('./routes/users');
 
 mongoose.connect('mongodb://localhost/news');
 
